@@ -1,0 +1,170 @@
+/* --- IMPOSTAZIONI GLOBALI E FONT --- */
+:root {
+  --font-bloccoso: 'Impact', 'Arial Black', sans-serif;
+  --colore-sfondo-footer: #bf7045;
+  --colore-sfondo-testi: #eef2f5;
+  --colore-linea: #d3d3d3;
+}
+
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #333;
+}
+
+h1, h2, h3, .titolo-bloccoso {
+  font-family: var(--font-bloccoso);
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 30px 0;
+}
+
+h1 { font-size: 3rem; text-transform: uppercase; }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px; 
+  background-color: #bf7045;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky; 
+  top: 0;
+  z-index: 100;
+  height: fit-content;
+}
+.navbar img {
+  height: 20px; 
+  pointer-events: none;
+}
+.navbar nav a {
+  text-decoration: none;
+  color: #fff;
+  margin-left: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.navbar a:hover{
+    opacity: 0.4;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  background-color: var(--colore-sfondo-footer);
+  padding: 20px;
+  margin-top: 50px;
+}
+.footer-icons a img {
+  height: 35px;
+  width: 35px;
+}
+.footer-icons > div {
+  justify-content: center;
+  text-align: center;
+}
+
+.testo-centrato { 
+  text-align: center; 
+  width: 80%; 
+  margin: 0 auto; 
+  display: block; 
+  line-height: 1.6;
+}
+
+.box-colorato {
+  background-color: rgb(237, 237, 237);
+  padding: 30px;
+  border-radius: 10px;
+  height: fit-content;
+  width: 80%;
+  margin: 30px auto;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.immagine-centrata { 
+  display: block; 
+  margin: 20px auto; 
+  max-width: 80%; 
+}
+
+.hero-image { width: 100%; height: 80vh; object-fit: cover; display: block; }
+
+.carousel-wrapper {
+  width: 80%;
+  margin: -30px auto 40px auto;
+  position: relative;
+  z-index: 10;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  padding-bottom: 20px;
+}
+.contest-page .carousel-wrapper {
+  margin-top: 20px;
+}
+
+.carousel-container { overflow: hidden; position: relative; }
+.carousel-track { display: flex; transition: transform 0.5s ease-in-out; }
+.carousel-slide { min-width: 100%; box-sizing: border-box; }
+.carousel-slide img { width: 100%; height: 500px; object-fit: cover; }
+.carousel-text { padding: 15px; text-align: center; font-size: 1.1rem; }
+
+.carousel-dots { text-align: center; margin-top: 10px; }
+.dot {
+  display: inline-block; width: 12px; height: 12px; margin: 0 5px;
+  background-color: #bbb; border-radius: 50%; cursor: pointer;
+}
+.dot.active { background-color: #333; }
+
+
+.split-text-section { display: flex; width: 80%; margin: 60px auto; gap: 40px; }
+.split-left { flex: 2; text-align: justify; }
+.split-right { flex: 1; text-align: justify; }
+.big-image-aligned { width: 80%; margin: 0 auto 50px auto; display: block; }
+
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 80%; height: 25vw; margin: 20px auto; }
+.grid-3 img { width: 100%; height: 30vh; width: 25vw; display: flex; object-fit: cover; align-items: center; justify-content: center;}
+.grid-3x3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 80%; margin: 80px auto; text-align: center; }
+.grid-3x3 img {opacity: 0.7; width: 25vw; object-fit: contain;}
+.grid-3x3 div {width: 25vw; height: 23vw; display: flex; justify-content: space-between; flex-direction: column; padding-bottom: 120px;}
+.grid-3x3 img:hover {opacity: 1;}
+
+.software-row { display: flex; width: 80%; margin: 20px auto; align-items: center; padding-bottom: 20px; border-bottom: 1px solid var(--colore-linea); }
+.software-icon { width: 60px; margin-right: 30px; }
+.software-images { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; flex-grow: 1; }
+
+
+.link-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; width: 80%; margin: 40px auto; text-align: center; }
+
+
+
+
+#schermo-bloccato {
+    display: none; 
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background-color: #111111; 
+    color: #ffffff; 
+    z-index: 9999; 
+    text-align: center; 
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+
+@media screen and (max-width: 900px) and (orientation: portrait) {
+    #schermo-bloccato {
+        display: flex; /* Mostra l'avviso */
+        justify-content: center;
+        align-items: center;
+    }
+}
+
